@@ -1,12 +1,15 @@
 import java.util.*;
 
 public class Proof {
+	
+	LineNumber currentline = new LineNumber();
 
 	public Proof (TheoremSet theorems) {
 	}
 
 	public LineNumber nextLineNumber ( ) {
-		return null;
+		currentline.next();
+		return currentline;
 	}
 
 	public void extendProof (String x) throws IllegalLineException, IllegalInferenceException {
